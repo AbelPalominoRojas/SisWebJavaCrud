@@ -14,7 +14,6 @@ import java.util.List;
 public abstract class AbstractCrud<T> {
 
     //Abributos para acceso a DB
-
     protected Connection connection;
     protected PreparedStatement preparedStatement;
     protected CallableStatement callableStatement;
@@ -22,14 +21,14 @@ public abstract class AbstractCrud<T> {
     protected String sqlQuery;
 
     //Definicion de metodos
-    public abstract boolean create(T entity);
+    public abstract boolean create(T entity) throws Exception;
 
-    public abstract boolean update(T entity);
+    public abstract boolean update(T entity) throws Exception;
 
-    public abstract boolean delete(T entity);
+    public abstract boolean delete(T entity) throws Exception;
 
-    public abstract T find(T entity);
+    public abstract T find(T entity) throws Exception;
 
-    public abstract List<T> findAll();
+    public abstract List<T> findAll() throws Exception;
 
 }
