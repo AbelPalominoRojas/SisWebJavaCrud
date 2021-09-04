@@ -10,7 +10,9 @@ package models;
  * @author Abel
  */
 public class Producto {
+
     //Atributos
+
     private int idProducto;
     private int idCategoria;
     private String nombre;
@@ -21,7 +23,6 @@ public class Producto {
     public Producto() {
     }
 
-    
     public Producto(int idProducto, int idCategoria, String nombre, String presentacion, double precio) {
         this.idProducto = idProducto;
         this.idCategoria = idCategoria;
@@ -70,6 +71,5 @@ public class Producto {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
-    
-    
+
 }

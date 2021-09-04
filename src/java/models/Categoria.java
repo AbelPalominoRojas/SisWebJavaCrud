@@ -10,7 +10,9 @@ package models;
  * @author Abel
  */
 public class Categoria {
+
     //Variables / Atributos
+
     private int idCategoria;
     private String nombre;
     private String descripcion;
@@ -50,5 +52,4 @@ public class Categoria {
         this.descripcion = descripcion;
     }
 
-    
 }
