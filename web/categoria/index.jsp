@@ -1,7 +1,6 @@
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="controller.CategoriaController" %>
-<%@page import="models.Categoria" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
 <html>
@@ -10,13 +9,25 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-        <%
-           List<Categoria> categorias = (List<Categoria>) request.getAttribute("categorias");
-           
-           for(Categoria cat : categorias){
-               out.println(cat.getNombre() + "<br>");
-           }
-        %>
+        <h1>Lista de categoria</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Cod</th>
+                    <th>Categoria</th>
+                    <th>Descripcion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <c:forEach items="${categorias}" var="cat">
+                <tr>
+                    <td>${cat.idCategoria}</td>
+                    <td>${cat.nombre}</td>
+                    <td>${cat.descripcion}</td>
+                </tr>
+                </c:forEach>
+            </tbody>
+        </table>
     </body>
 </html>
